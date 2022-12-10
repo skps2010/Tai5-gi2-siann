@@ -5,15 +5,11 @@ import requests
 import io
 import re
 
-intents = discord.Intents.default()
-intents.message_content = True
-client = discord.Client(intents=intents)
+client = discord.Client()
 
 
 def get_sound_file(s):
-    json = {
-        'taibun': s
-    }
+    json = {'taibun': s}
     r = requests.post(f'https://hokbu.ithuan.tw/tau', data=json)
     taibun = r.json()['KIP']
     r = requests.get(f'https://hapsing.ithuan.tw/bangtsam?taibun={taibun}')
