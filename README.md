@@ -7,3 +7,6 @@ echo DISCORD_TOKEN=[your Discord bot's token] > .env
 pip3 install -r requirements.txt
 python3 main.py
 ```
+
+## 來源
+我是使用意團科技的產品：鬥拍字的 API https://suisiann.ithuan.tw/
