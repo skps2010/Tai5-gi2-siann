@@ -9,4 +9,4 @@ python3 main.py
 ```
 
 ## 來源
-我是使用意團科技的產品；鬥拍字的 API https://suisiann.ithuan.tw/
+我是使用意團科技的產品：鬥拍字的 API https://suisiann.ithuan.tw/
