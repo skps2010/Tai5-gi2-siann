@@ -49,7 +49,7 @@ async def on_message(message):
         content = content[:-4]
 
     file = discord.File(get_sound_file(content), 'taigi.mp3')
-    await message.channel.send(None, file=file)
+    await message.channel.send(None, file=file, reference=message)
 
 
 if __name__ == '__main__':
