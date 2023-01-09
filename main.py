@@ -33,7 +33,7 @@ async def on_message(message):
         return
 
     tailo_r = re.compile(
-        r'[áàâǎāéèêěēíìîǐīóòôǒōúùûǔ]|ḿ|m̀|m̂|m̌|m̄|ń|ǹ|n̂|ň|n̄|ⁿ|a̍|e̍|ı̍|o̍|u̍',
+        r'[áàâǎāéèêěēíìîǐīóòôǒōúùûǔū]|ḿ|m̀|m̂|m̌|m̄|ń|ǹ|n̂|ň|n̄|ⁿ|a̍|e̍|ı̍|o̍|u̍',
         flags=re.IGNORECASE)
     taigi_r = re.compile(r'[\(（][台臺]語[\)）]')
     content = message.content
