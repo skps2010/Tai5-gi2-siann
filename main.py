@@ -44,6 +44,14 @@ async def on_message(message):
     if taigi_r.search(content):
         content = content[:-4]
 
+    content_list = content.split()
+    new_content_list = []
+    for ku in content_list:
+        if '@' in ku:
+            continue
+        new_content_list.append(ku)
+    content = ' '.join(new_content_list)
+
     file = discord.File(get_sound_file(content), 'taigi.mp3')
     await message.channel.send(None, file=file, reference=message)
 
