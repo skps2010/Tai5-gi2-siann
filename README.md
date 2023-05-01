@@ -11,5 +11,9 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
+## 原理
+這个 Bot 會檢查一句話內底敢有臺羅聲調（譬如 ô），佮句尾敢有「臺語」兩字
+若有，伊就會生音檔
+
 ## 來源
 我是使用意傳科技的產品：鬥拍字的 API https://suisiann.ithuan.tw/
