@@ -1,4 +1,4 @@
-# Tai5-gi2-siann
+# 臺語聲 Tâi-gí-siann
 這是一个 Discord bot ，會共你輸入的台語文變成一个台語音檔，予福佬話的青盲牛聽有。
 
 ## 邀請到 Discord server
