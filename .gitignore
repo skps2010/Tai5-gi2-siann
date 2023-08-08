@@ -1,2 +1,4 @@
 .env
 .DS_Store
+database.json
+database.json.lock
