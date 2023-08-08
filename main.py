@@ -37,14 +37,13 @@ async def on_message(message: discord.Message):
     tailo_r = re.compile(
         r'[áàâǎāéèêěēíìîǐīóòôǒōúùûǔū]|ḿ|m̀|m̂|m̌|m̄|ń|ǹ|n̂|ň|n̄|ⁿ|a̍|e̍|ı̍|o̍|u̍',
         flags=re.IGNORECASE)
-    taigi_r = re.compile(r'[\[「\'"\(（][台臺]語[\)）\]」\'"]')
+    taigi_r = re.compile(r'[\[「\'"\(（][台臺]語[\)）\]」\'"]$')
     content = message.content
 
     if not tailo_r.search(content) and not taigi_r.search(content):
         return
 
-    if taigi_r.search(content):
-        content = content[:-4]
+    content = taigi_r.sub('', content)
 
     content_list = content.split()
     new_content_list = []
