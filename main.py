@@ -5,10 +5,12 @@ import requests
 import io
 import re
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 
-def get_sound_file(s):
+def get_sound_file(s: str):
     json = {'taibun': s}
     r = requests.post(f'https://hokbu.ithuan.tw/tau', data=json)
     taibun = r.json()['KIP']
@@ -28,14 +30,14 @@ async def on_ready():
 
 
 @client.event
-async def on_message(message):
+async def on_message(message: discord.Message):
     if message.author == client.user:
         return
 
     tailo_r = re.compile(
         r'[áàâǎāéèêěēíìîǐīóòôǒōúùûǔū]|ḿ|m̀|m̂|m̌|m̄|ń|ǹ|n̂|ň|n̄|ⁿ|a̍|e̍|ı̍|o̍|u̍',
         flags=re.IGNORECASE)
-    taigi_r = re.compile(r'[\(（][台臺]語[\)）]')
+    taigi_r = re.compile(r'[\[「\'"\(（][台臺]語[\)）\]」\'"]')
     content = message.content
 
     if not tailo_r.search(content) and not taigi_r.search(content):
