@@ -11,6 +11,16 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
+## 指令
+```
+$taigi [ help | rule | set_keyword [regex] | set_detect_tone [bool] | reset ]
+$taigi help # 幫助
+$taigi rule # 這馬的設定
+$taigi set_keyword [regex] ＃ 設定會予 bot 掠出來的 keyword ，是 regular expression 。正常是 [\[「\'"\(（][台臺]語[\)）\]」\'"]$
+$taigi set_detect_tone [bool] # 設定 bot 敢會掠出來有聲調的字母，是 True 抑 False 。正常是 True
+$taigi reset # 共設定復原到正常的設定
+```
+
 ## 原理
 這个 Bot 會檢查一句話內底敢有臺羅聲調（譬如 ô），佮句尾敢有「臺語」兩字。  
 若有，伊就會生音檔。  
