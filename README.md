@@ -5,18 +5,18 @@
 https://discord.com/api/oauth2/authorize?client_id=1051050407088111616&permissions=3072&scope=bot
 
 ## 家己走的方式
-```
+```bash
 echo DISCORD_TOKEN=[your Discord bot's token] > .env
 pip3 install -r requirements.txt
 python3 main.py
 ```
 
 ## 指令
-```
+```bash
 $taigi [ help | rule | set_keyword [regex] | set_detect_tone [bool] | reset ]
 $taigi help # 幫助
 $taigi rule # 這馬的設定
-$taigi set_keyword [regex] ＃ 設定會予 bot 掠出來的 keyword ，是 regular expression 。正常是 [\[「\'"\(（][台臺]語[\)）\]」\'"]$
+$taigi set_keyword [regex] # 設定會予 bot 掠出來的 keyword ，是 regular expression 。正常是 [\[「\'"\(（][台臺]語[\)）\]」\'"]$
 $taigi set_detect_tone [bool] # 設定 bot 敢會掠出來有聲調的字母，是 True 抑 False 。正常是 True
 $taigi reset # 共設定復原到正常的設定
 ```
