@@ -1,6 +1,8 @@
 # 臺語聲 Tâi-gí-siann
 這是一个 Discord bot ，會共你輸入的台語文變成一个台語音檔，予福佬話的青盲牛聽有。
 
+[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/zuozing112l)
+
 ## 邀請到 Discord server
 https://discord.com/api/oauth2/authorize?client_id=1051050407088111616&permissions=3072&scope=bot
 
