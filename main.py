@@ -12,6 +12,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='$', intents=intents)
 database = db.getDb("database.json")
+log = db.getDb("log.json")
 DEFAULT_SETTING = {
     'gid': -1,
     'keyword': '[\[「\'"\(（][台臺]語[\)）\]」\'"]$',
@@ -109,6 +110,15 @@ async def on_message(message: discord.Message):
     if not (server['detect_tone']
             and tailo_r.search(content)) and not taigi_r.search(content):
         return
+
+    log.add({
+        'gid': gid,
+        'name': message.guild.name,
+        'uid': message.author.id,
+        'username': message.author.name,
+        'content': content,
+        'timestamp': message.created_at.timestamp(),
+    })
 
     content = taigi_r.sub('', content)
 
